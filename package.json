@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/BurlingtonCodeAcademy/guess-the-number/issues"
   },
-  "homepage": "https://github.com/BurlingtonCodeAcademy/guess-the-number#readme"
+  "homepage": "https://github.com/BurlingtonCodeAcademy/guess-the-number#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
