@@ -6,13 +6,38 @@ function ask(questionText) {
     rl.question(questionText, resolve);
   });
 }
+const num = Math.ceil(Math.random() * 100);
 
-start();
+
+
 
 async function start() {
-  console.log("Let's play a game where you (human) make up a number and I (computer) try to guess it.")
-  let secretNumber = await ask("What is your secret number?\nI won't peek, I swear...\n");
-  console.log('You entered: ' + secretNumber);
-  // Now try and complete the program.
-  process.exit();
+  console.log ("Hello, do you want to play a game?");
+  let response = await ask("Yes or No?");
+  while ((response != "No"||"no"||"N"||"n") && (response != "Yes"||"yes"||"y"||"Y")){
+  } if (response != "No"||"no"||"N"||"n"){
+    console.log("Good-Bye")
+  } else if (response = "Yes"||"yes"||"y"||"Y"){
+  console.log("OK!...Please think of a number between 1 and 100.\n I will try and guess it!")
+  let randomNumber = num
+  console.log(randomNumber)
+  promtGuess(randomNumber)
+  }
 }
+  async function promptGuess(answer) {
+  let guessNumber = await ask("What is your guess?\nI won't peek, I swear...\n");
+  console.log('Your guess is: ' + guessNumber);
+  
+
+
+
+
+
+
+  
+
+
+ process.exit();
+}
+
+start();
